@@ -1,11 +1,10 @@
-{% extends "layout.html" %}
-{% block content %}
-<div class="home">
-    <h1>My Homepage</h1>
-    <p>This is a test website. {{myName}}</p>
-    <p><form action="{{ url_for('greet') }}" method='post'>
-        Please type your name: <input type='text' name='myName'><br>
-        <input type='submit' value='Submit'>
-        </form></p>
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sow</title>
+</head>
+<body>
+    <h1>{{ myName }}</h1>
+    <p>This is my Flask page.</p>
+</body>
+</html>

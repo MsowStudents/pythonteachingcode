@@ -126,7 +126,7 @@ class Calculator(Frame):
         :return: None
         """
         master.bind("<Return>", lambda event, btn=self.eq_bttn: self.flash(btn))
-        master.bind("<BackSpace>", lambda event, btn=self.c_bttn: self.flash(btn))
+        master.bind("<BackSpace>", lambda event, btn=self.ac_bttn: self.flash(btn))
         master.bind("9", lambda event, char="9", btn=self.nine_bttn: self.add_chr(char, btn))
         master.bind("8", lambda event, char="8", btn=self.eight_bttn: self.add_chr(char, btn))
         master.bind("7", lambda event, char="7", btn=self.seven_bttn: self.add_chr(char, btn))
@@ -159,8 +159,8 @@ class Calculator(Frame):
         self.ac_bttn = Button(self, text='CE', width=9, height=3, bg='LightBlue', fg='red',command=lambda: self.clear_all())
         self.ac_bttn.grid(row=1, column=4)
 
-        self.c_bttn = Button(self, text='←', width=9, height=3, bg='LightBlue', fg='red',command=lambda: self.clear())
-        self.c_bttn.grid(row=1, column=5 )
+        self.sin_bttn = Button(self, text='sin', width=9, height=3, bg='LightBlue', fg='red',command=lambda: self.add.chr("sin"))
+        self.sin_bttn.grid(row=1, column=5 )
 
         self.add_bttn = Button(self, text="+", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr('+'))
         self.add_bttn.grid(row=4, column=3)
@@ -195,7 +195,7 @@ class Calculator(Frame):
         self.six_bttn = Button(self, text="6", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(6))
         self.six_bttn.grid(row=2, column=2)
 
-        self.one_bttn = Button(self, text="1", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(1))
+        self.one_bttn = Button(self, text="Moussa", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr("Sow"))
         self.one_bttn.grid(row=3, column=0)
 
         self.two_bttn = Button(self, text="DT", width=9, height=3, bg='LightBlue', fg='red',command=lambda: self.add_chr("Thomas"))
@@ -213,14 +213,14 @@ class Calculator(Frame):
         self.lpar_bttn = Button(self, text="(", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr('('))
         self.lpar_bttn.grid(row=2, column=4)
 
-        self.rpar_bttn = Button(self, text=")", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(')'))
-        self.rpar_bttn.grid(row=2, column=5)
+        self.cos_bttn = Button(self, text=")", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(')'))
+        self.cos_bttn.grid(row=2, column=5)
 
         self.sq_bttn = Button(self, text="√", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr('√('))
         self.sq_bttn.grid(row=3, column=4)
 
-        self.sqr_bttn = Button(self, text="^", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr('^'))
-        self.sqr_bttn.grid(row=3, column=5)
+        self.tan_bttn = Button(self, text="^", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr('^'))
+        self.tan_bttn.grid(row=3, column=5)
 
 root = Tk()
 root.geometry()
